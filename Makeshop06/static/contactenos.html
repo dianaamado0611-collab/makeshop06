@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos - Belleza Glam</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe0ec, #f6e1f2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .contact-container {
+      background-color: #fff;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      color: #d14c86;
+      margin-bottom: 25px;
+    }
+
+    .contact-container input[type="text"],
+    .contact-container input[type="email"],
+    .contact-container textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+    }
+
+    .contact-container textarea {
+      height: 120px;
+    }
+
+    .contact-container input[type="submit"] {
+      background-color: #d14c86;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-container input[type="submit"]:hover {
+      background-color: #b93b71;
+    }
+
+    .contact-container .note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h2>Contáctanos</h2>
+    <form action="/enviar-mensaje" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <input type="submit" value="Enviar Mensaje">
+    </form>
+    <p class="note">Nos pondremos en contacto contigo lo antes posible 💕</p>
+  </div>
+
+</body>
+</html>

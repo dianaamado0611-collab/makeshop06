@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Belleza Glam</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8c6da, #f6e1f2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #d14c86;
+      margin-bottom: 25px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-container input[type="submit"] {
+      background-color: #d14c86;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-container input[type="submit"]:hover {
+      background-color: #b93b71;
+    }
+
+    .login-container .links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-container .links a {
+      color: #d14c86;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-container .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Bienvenida a MakeShop</h2>
+    <form action="/procesar-login" method="POST">
+      <input type="text" name="usuario" placeholder="Nombre de usuario o correo" required>
+      <input type="password" name="contraseña" placeholder="Contraseña" required>
+      <input type="submit" value="Iniciar Sesión">
+    </form>
+    <div class="links">
+      <a href="#">¿Olvidaste tu contraseña?</a><br>
+      <a href="#">Crear una cuenta</a>
+    </div>
+  </div>
+
+</body>
+</html>

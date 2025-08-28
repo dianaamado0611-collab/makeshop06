@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ofertas - Maquillaje Glam</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #fff4f7; }
+    .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+    input[type="text"] { padding: 10px; width: 100%; margin-top: 10px; }
+    button { padding: 10px 20px; margin-top: 10px; background: #e91e63; color: white; border: none; cursor: pointer; }
+    .message { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>¡Aplica tu código de oferta!</h2>
+  <p>Total: <strong id="total-original">$100.00</strong></p>
+
+  <label for="codigo">Ingresa tu código:</label>
+  <input type="text" id="codigo" placeholder="Ej: MAQUILLAJE20">
+  <button onclick="aplicarDescuento()">Aplicar Código</button>
+
+  <div class="message" id="mensaje"></div>
+  <p id="total-final"></p>
+</div>
+
+<script>
+  const totalOriginal = 100;
+  const codigosValidos = {
+    "MAQUILLAJE20": 20,
+    "GLAM15": 15,
+    "BELLEZA10": 10
+  };
+
+  function aplicarDescuento() {
+    const input = document.getElementById("codigo").value.trim().toUpperCase();
+    const mensaje = document.getElementById("mensaje");
+    const totalFinal = document.getElementById("total-final");
+
+    if (codigosValidos[input]) {
+      const descuento = codigosValidos[input];
+      const nuevoTotal = totalOriginal - (totalOriginal * descuento / 100);
+      mensaje.textContent = `¡Código válido! Se aplicó un ${descuento}% de descuento.`;
+      totalFinal.textContent = `Nuevo Total: $${nuevoTotal.toFixed(2)}`;
+      mensaje.style.color = "green";
+    } else {
+      mensaje.textContent = "Código inválido. Intenta con otro.";
+      totalFinal.textContent = "";
+      mensaje.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>

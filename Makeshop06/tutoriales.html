@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutoriales de Maquillaje</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fbe4ec;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d81b60;
+    }
+
+    .tutoriales {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .tutorial {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .tutorial h2 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #c2185b;
+    }
+
+    .tutorial p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .ver-btn {
+      margin-top: 10px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .ver-btn:hover {
+      background-color: #d81b60;
+    }
+
+    .detalle {
+      display: none;
+      margin-top: 10px;
+      background-color: #fce4ec;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Tutoriales de Maquillaje</h1>
+
+<div class="tutoriales">
+  <div class="tutorial">
+    <h2>Maquillaje Natural</h2>
+    <p>Ideal para el día a día, rápido y sencillo.</p>
+    <button class="ver-btn" onclick="mostrarDetalle(this)">Ver pasos</button>
+    <div class="detalle">
+      <ol>
+        <li>Limpia e hidrata tu rostro.</li>
+        <li>Aplica una base ligera.</li>
+        <li>Corrige con corrector.</li>
+        <li>Coloca rubor suave.</li>
+        <li>Rímel y brillo labial.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="tutorial">
+    <h2>Smokey Eyes</h2>
+    <p>Perfecto para eventos nocturnos o especiales.</p>
+    <button class="ver-btn" onclick="mostrarDetalle(this)">Ver pasos</button>
+    <div class="detalle">
+      <ol>
+        <li>Prepara el párpado con primer.</li>
+        <li>Aplica sombra oscura en la cuenca.</li>
+        <li>Difumina con sombra más clara.</li>
+        <li>Delinea y aplica máscara.</li>
+        <li>Combina con labial nude.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="tutorial">
+    <h2>Maquillaje de Verano</h2>
+    <p>Look fresco y duradero para climas cálidos.</p>
+    <button class="ver-btn" onclick="mostrarDetalle(this)">Ver pasos</button>
+    <div class="detalle">
+      <ol>
+        <li>Usa protector solar con color.</li>
+        <li>Polvo matificante para sellar.</li>
+        <li>Rubor y bronzer suaves.</li>
+        <li>Sombras en tonos coral o durazno.</li>
+        <li>Fijador para mayor duración.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<script>
+  function mostrarDetalle(boton) {
+    const detalle = boton.nextElementSibling;
+    const visible = detalle.style.display === "block";
+    detalle.style.display = visible ? "none" : "block";
+    boton.textContent = visible ? "Ver pasos" : "Ocultar pasos";
+  }
+</script>
+
+</body>
+</html>
+

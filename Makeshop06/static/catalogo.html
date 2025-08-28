@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MakeShop - Maquillaje para Chicas</title>
+  <style>
+    :root {
+      --color-fondo: #fffafc;
+      --color-principal: #c89bb5;
+      --color-secundario: #f8e8f0;
+      --color-texto: #333;
+      --color-boton: #b67aa0;
+      --color-hover: #a78c9d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: var(--color-secundario);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--color-principal);
+      text-decoration: none;
+    }
+
+    .navbar-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar-links li {
+      display: inline;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      color: var(--color-texto);
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 8px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+      background-color: var(--color-hover);
+      border-radius: 5px;
+    }
+
+    .explore-btn {
+      background-color: var(--color-boton);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      background-color: #9d4f73;
+    }
+
+    .catalogo {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: var(--color-secundario);
+    }
+
+    .titulo-catalogo {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: var(--color-principal);
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .producto {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .producto h3 {
+      font-size: 1.3rem;
+      color: var(--color-principal);
+      margin-bottom: 10px;
+    }
+
+    .producto .descripcion {
+      font-size: 1rem;
+      color: var(--color-texto);
+      margin-bottom: 15px;
+    }
+
+    .producto .precio {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--color-boton);
+      margin-bottom: 20px;
+    }
+
+    .btn-explorar {
+      background-color: var(--color-boton);
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-explorar:hover {
+      background-color: #9d4f73;
+    }
+
+    .producto:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar-container">
+      <a href="#" class="logo">MakeShop</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Productos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Tutoriales</a></li>
+        <li><a href="contactenos.html">Contacto</a></li>
+        <li><a href="#" class="explore-btn">Explorar Catálogo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Catálogo -->
+  <section class="catalogo">
+    <h2 class="titulo-catalogo">Explora Nuestro Catálogo</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="img/labial.png" alt="Labial">
+        <h3>Labial Mate</h3>
+        <p class="descripcion">Labial de alta pigmentación, acabado mate y duración de 12 horas.</p>
+        <span class="precio">$15.99</span>
+        <a href="#" class="btn-explorar">Explorar</a>
+      </div>
+      <div class="producto">
+        <img src="img/sombra de ojos.png" alt="Sombra">
+        <h3>Sombra de Ojos</h3>
+        <p class="descripcion">Sombra en polvo, fácil de aplicar y con acabado duradero.</p>
+        <span class="precio">$12.99</span>
+        <a href="#" class="btn-explorar">Explorar</a>
+      </div>
+      <div class="producto">
+        <img src="img/base.png" alt="Base de Maquillaje">
+        <h3>Base de Maquillaje</h3>
+        <p class="descripcion">Base líquida de cobertura media a completa, para todo tipo de piel.</p>
+        <span class="precio">$19.99</span>
+        <a href="#" class="btn-explorar">Explorar</a>
+      </div>
+      <div class="producto">
+        <img src="img/esmalte.png" alt="Esmalte de Uñas">
+        <h3>Esmalte de Uñas</h3>
+        <p class="descripcion">Esmalte de uñas de larga duración con acabado brillante.</p>
+        <span class="precio">$8.99</span>
+        <a href="#" class="btn-explorar">Explorar</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+

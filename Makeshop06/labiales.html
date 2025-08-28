@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Probador Virtual de Labiales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff4f7;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+
+    .cara {
+      position: relative;
+      width: 200px;
+      height: 250px;
+      background: #ffe0e9;
+      border-radius: 50% / 60%;
+      margin: 40px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .ojo {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: black;
+      border-radius: 50%;
+      top: 60px;
+    }
+
+    .ojo.izq { left: 50px; }
+    .ojo.der { right: 50px; }
+
+    .labios {
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      background: #b71c1c;
+      border-radius: 50px/25px;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: background 0.3s ease;
+    }
+
+    .colores {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .color-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .color-btn:hover {
+      transform: scale(1.2);
+      border-color: #333;
+    }
+
+    .etiqueta {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>💄 Probador Virtual de Labiales</h1>
+<p>Haz clic en un color para ver cómo queda</p>
+
+<div class="cara">
+  <div class="ojo izq"></div>
+  <div class="ojo der"></div>
+  <div class="labios" id="labios"></div>
+</div>
+
+<div class="colores">
+  <button class="color-btn" style="background:#b71c1c;" onclick="cambiarLabial('#b71c1c')"></button>
+  <button class="color-btn" style="background:#e91e63;" onclick="cambiarLabial('#e91e63')"></button>
+  <button class="color-btn" style="background:#f06292;" onclick="cambiarLabial('#f06292')"></button>
+  <button class="color-btn" style="background:#880e4f;" onclick="cambiarLabial('#880e4f')"></button>
+  <button class="color-btn" style="background:#ff1744;" onclick="cambiarLabial('#ff1744')"></button>
+  <button class="color-btn" style="background:#ff6f00;" onclick="cambiarLabial('#ff6f00')"></button>
+</div>
+
+<div class="etiqueta" id="etiqueta-color">Color actual: #b71c1c</div>
+
+<script>
+  function cambiarLabial(color) {
+    document.getElementById("labios").style.background = color;
+    document.getElementById("etiqueta-color").textContent = "Color actual: " + color;
+  }
+</script>
+
+</body>
+</html>
